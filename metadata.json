@@ -1,0 +1,5 @@
+{
+  "name": "Social Pulse AI",
+  "description": "An AI-powered application that fetches and displays the latest trends from Google Search, TikTok, Reddit, X, Instagram, and Facebook using Gemini with Google Search grounding for up-to-date information.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Pulse AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+          "recharts": "https://aistudiocdn.com/recharts@^2.13.0"
+        }
+      }
+    </script>
+    <style>
+      /* Main "Nebula Glow" Theme Styles */
+      body {
+          background-color: #0c0a1d; 
+          color: #EAE8FF; /* Soft lavender-white text */
+          background-image: url('https://images.unsplash.com/photo-1627037558425-c2a18b53e414?q=80&w=3870&auto=format&fit=crop');
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: center;
+          font-family: 'Roboto', sans-serif !important;
+      }
+      
+      .font-sans {
+        font-family: 'Roboto', sans-serif !important;
+      }
+
+      /* Base background and text colors */
+      .bg-gray-900, .bg-gray-800 {
+          background-color: transparent !important;
+      }
+      .text-white { color: #FFFFFF !important; }
+      .text-gray-100 { color: #F0EDFF !important; }
+      .text-gray-200 { color: #EAE8FF !important; }
+      .text-gray-300 { color: #D5D1F5 !important; } 
+      .text-gray-400 { color: #B8B2E0 !important; } 
+      .text-gray-500 { color: #948EC1 !important; }
+
+      /* Component Backgrounds & Borders (Glassmorphism) */
+      .bg-gray-800\/50 {
+          background-color: rgba(230, 220, 255, 0.15) !important; /* Light lavender glass */
+          backdrop-filter: blur(12px) !important;
+          border-color: rgba(200, 182, 255, 0.5) !important; 
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+      .border-gray-700, .border-gray-600 {
+        border-color: rgba(200, 182, 255, 0.5) !important;
+      }
+
+      /* Gradient & Accent Color Overrides */
+      .text-transparent.bg-clip-text.bg-gradient-to-r.from-purple-400.to-pink-600,
+      .text-transparent.bg-clip-text.bg-gradient-to-r.from-purple-400.to-pink-500 {
+          background-image: linear-gradient(to right, #67e8f9, #f472b6) !important; /* Cyan to Pink */
+      }
+      .bg-gradient-to-r.from-blue-500.to-purple-600 {
+          background-image: linear-gradient(to right, #22d3ee, #d946ef) !important; /* Cyan to Magenta */
+      }
+      .hover\:bg-gray-600:hover {
+           background-color: rgba(230, 220, 255, 0.2) !important;
+      }
+      .text-purple-400 { color: #a78bfa !important; } /* Lavender */
+      .border-purple-500, .border-purple-500:hover, .hover\:border-purple-500:hover { border-color: #D8B4FE !important; }
+      .bg-purple-600 { background-color: #f472b6 !important; } /* Pink */
+      .bg-purple-900\/50 { background-color: rgba(216, 180, 254, 0.25) !important; }
+      .focus\:ring-purple-500:focus { --tw-ring-color: #f472b6 !important; }
+      .focus\:border-purple-500:focus { border-color: #f472b6 !important; }
+
+      /* Form Element Overrides */
+      .bg-gray-700 { background-color: rgba(230, 220, 255, 0.1) !important; } 
+      input, select { color: #FFFFFF !important; }
+      select option { background: #1e1b4b; color: #FFFFFF; } /* Deep indigo */
+      input::placeholder { color: #B8B2E0; }
+      input[type="checkbox"] {
+          color: #a855f7 !important; /* Purple */
+      }
+      input[type="checkbox"]:checked {
+          background-color: #f472b6 !important; /* Pink */
+      }
+      
+      /* Error overrides */
+      .text-red-300 { color: #fecaca !important; } 
+      .bg-red-900\/40 { background-color: rgba(225, 29, 72, 0.2) !important; }
+      .border-red-700\/50 { border-color: rgba(244, 63, 94, 0.7) !important; }
+      .text-red-200 { color: #fecaca !important; }
+      .bg-red-800\/60 { background-color: rgba(190, 18, 60, 0.5) !important; }
+      .hover\:bg-red-700\/80:hover { background-color: rgba(225, 29, 72, 0.6) !important; }
+      .text-yellow-300 { color: #fde047 !important; }
+      .bg-yellow-900\/30 { background-color: rgba(234, 179, 8, 0.15) !important; }
+      .bg-yellow-600 { background-color: #f59e0b !important; }
+      .hover\:bg-yellow-500:hover { background-color: #facc15 !important; }
+      .text-red-400 { color: #fb7185 !important; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
